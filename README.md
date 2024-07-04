@@ -25,4 +25,4 @@ You can do **COMBO KILL**s when you **COMBO KILL** n times you will get $2^{n-1}
 |2024/07/04|0.0.1(Model Editon)|(Now)
 ## More
 Please give me a star if you like this project.It is very ***Important*** for a Middle School Student!
-If you have any question.Add a 
+If you have any question.Add a *Issue*.I will reply it quckly if I see.
