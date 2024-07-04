@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg53nuw8b8plc"]
+
+[ext_resource type="Script" path="res://scripts/guai.gd" id="1_6gfat"]
+[ext_resource type="Texture2D" uid="uid://bknru3yta62ct" path="res://Acests/Charcters/tile_0011.png" id="2_d0b0o"]
+[ext_resource type="Texture2D" uid="uid://536ne7lbdtnl" path="res://Acests/Charcters/tile_0012.png" id="3_wdvp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ib56"]
+size = Vector2(15, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfdmf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d0b0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wdvp3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="guai" type="CharacterBody2D" groups=["guai"]]
+script = ExtResource("1_6gfat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_3ib56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yfdmf")
+animation = &"walk"

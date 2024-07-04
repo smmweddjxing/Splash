@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://gf7qov6k2ii5"]
+
+[ext_resource type="Script" path="res://Score.gd" id="1_xcqib"]
+[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="2_78w1w"]
+
+[node name="Score it" type="Control"]
+layout_mode = 3
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 204.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcqib")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_78w1w")
+theme_override_font_sizes/font_size = 10
+text = "False"
+
+[node name="Timer2" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.01

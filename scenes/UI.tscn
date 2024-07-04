@@ -1,0 +1,147 @@
+[gd_scene load_steps=9 format=3 uid="uid://om5cv6ndelni"]
+
+[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_10rqf"]
+[ext_resource type="Script" path="res://scripts/lose.gd" id="2_654iy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jio8f"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nloqw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnlap"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2j1b3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn875"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_pbrde"]
+default_font = ExtResource("1_10rqf")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/styles/disabled = SubResource("StyleBoxFlat_jio8f")
+Button/styles/focus = SubResource("StyleBoxFlat_nloqw")
+Button/styles/hover = SubResource("StyleBoxFlat_xnlap")
+Button/styles/normal = SubResource("StyleBoxFlat_2j1b3")
+Button/styles/pressed = SubResource("StyleBoxFlat_xn875")
+
+[node name="Lose Time" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -112.0
+offset_top = -63.0
+offset_right = 98.0
+offset_bottom = 82.0
+theme = SubResource("Theme_pbrde")
+script = ExtResource("2_654iy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -68.0
+offset_right = 183.0
+offset_bottom = 45.0
+color = Color(0.479385, 0.559899, 0.97744, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -92.0
+offset_right = 210.0
+offset_bottom = -24.0
+theme_override_font_sizes/font_size = 30
+text = "Lose!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -68.0
+offset_top = -40.0
+offset_right = 266.0
+offset_bottom = -17.0
+theme_override_font_sizes/font_size = 13
+text = "You Lose! Do you want to
+try again?"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 11.0
+offset_right = 161.0
+offset_bottom = 40.0
+text = "try again"
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

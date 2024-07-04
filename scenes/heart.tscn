@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b35x85j0nk78w"]
+
+[ext_resource type="Script" path="res://Heart.gd" id="1_7mfvi"]
+[ext_resource type="Texture2D" uid="uid://yyrnu0rdp5vn" path="res://Acests/tile_0373.png" id="2_2q34v"]
+
+[node name="Heart" type="Area2D"]
+script = ExtResource("1_7mfvi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("2_2q34v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -5, 2, -6, 8, -6, 9, -2, 8, 2, 0, 9, -8, 1, -8, -3, -6, -6)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
