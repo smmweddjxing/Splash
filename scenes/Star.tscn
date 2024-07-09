@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://skaxvjwbruyo"]
+
+[ext_resource type="Script" path="res://scripts/Star.gd" id="1_3ywwe"]
+[ext_resource type="Texture2D" uid="uid://b8c7h58lbixvh" path="res://Acests/YD.png" id="1_s250a"]
+[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="3_u584h"]
+
+[node name="Star" type="Area2D"]
+script = ExtResource("1_3ywwe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_s250a")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(9, -15, 16, -8, 3, 11, -16, -3, -12, -15)
+
+[node name="LabelTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -114.0
+offset_top = 40.0
+offset_right = 447.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("3_u584h")
+theme_override_font_sizes/font_size = 12
+text = "you collected a  dianmond!"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="LabelTimer" to="." method="_on_label_timer_timeout"]

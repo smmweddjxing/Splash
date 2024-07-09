@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://dd45jjtvfvowd"]
+
+[ext_resource type="Texture2D" uid="uid://b6yl08wwxvxuk" path="res://Acests/Flag_clear.png" id="1_n5cb1"]
+[ext_resource type="Texture2D" uid="uid://bmx7rtodnm4mv" path="res://Acests/Flag_Unclear.png" id="2_xc8oj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n5cb1")
+}],
+"loop": true,
+"name": &"clear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xc8oj")
+}],
+"loop": true,
+"name": &"unclear",
+"speed": 5.0
+}]

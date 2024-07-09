@@ -5,6 +5,7 @@
 
 [node name="Score it" type="Control"]
 layout_mode = 3
+anchors_preset = 0
 offset_left = -3.0
 offset_top = -2.0
 offset_right = 204.0
