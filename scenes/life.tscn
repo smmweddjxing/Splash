@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c24cap143pnsy"]
 
-[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_m1xek"]
+[ext_resource type="FontFile" uid="uid://clj4fbtvaa8fx" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_m1xek"]
 [ext_resource type="Script" path="res://scripts/showing.gd" id="2_tjv8b"]
 [ext_resource type="Script" path="res://scripts/CoinLabel.gd" id="3_vukny"]
 [ext_resource type="Script" path="res://scripts/StarLabel.gd" id="4_dmjur"]

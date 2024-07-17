@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Star.gd" id="1_3ywwe"]
 [ext_resource type="Texture2D" uid="uid://b8c7h58lbixvh" path="res://Acests/YD.png" id="1_s250a"]
-[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="3_u584h"]
+[ext_resource type="FontFile" uid="uid://clj4fbtvaa8fx" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="3_u584h"]
 
 [node name="Star" type="Area2D"]
 script = ExtResource("1_3ywwe")
@@ -15,6 +15,7 @@ texture = ExtResource("1_s250a")
 polygon = PackedVector2Array(9, -15, 16, -8, 3, 11, -16, -3, -12, -15)
 
 [node name="LabelTimer" type="Timer" parent="."]
+wait_time = 3.0
 one_shot = true
 
 [node name="Label" type="Label" parent="."]

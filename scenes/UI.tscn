@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://om5cv6ndelni"]
 
-[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_10rqf"]
+[ext_resource type="FontFile" uid="uid://clj4fbtvaa8fx" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_m1a4l"]
 [ext_resource type="Script" path="res://scripts/lose.gd" id="2_654iy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jio8f"]
@@ -73,7 +73,7 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [sub_resource type="Theme" id="Theme_pbrde"]
-default_font = ExtResource("1_10rqf")
+default_font = ExtResource("1_m1a4l")
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
@@ -100,10 +100,8 @@ Button/styles/pressed = SubResource("StyleBoxFlat_xn875")
 [node name="Lose Time" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -112.0
-offset_top = -63.0
-offset_right = 98.0
-offset_bottom = 82.0
+offset_right = 191.0
+offset_bottom = 145.0
 theme = SubResource("Theme_pbrde")
 script = ExtResource("2_654iy")
 
@@ -112,7 +110,7 @@ layout_mode = 0
 offset_left = -96.0
 offset_top = -68.0
 offset_right = 183.0
-offset_bottom = 45.0
+offset_bottom = 125.0
 color = Color(0.479385, 0.559899, 0.97744, 1)
 
 [node name="Label" type="Label" parent="."]
@@ -144,4 +142,38 @@ offset_bottom = 40.0
 text = "try again"
 icon_alignment = 1
 
+[node name="Rich" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -74.0
+offset_top = -105.0
+offset_right = 181.0
+offset_bottom = -47.0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 13
+theme_override_font_sizes/italics_font_size = 13
+theme_override_font_sizes/bold_italics_font_size = 13
+theme_override_font_sizes/mono_font_size = 13
+bbcode_enabled = true
+text = "                    [color=\"yellow\"]another choice[/color]
+delete my save file
+[b]but it is [color=\"red\"]danger!!![/color][/b]"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = -53.0
+offset_top = 92.0
+offset_right = 153.0
+offset_bottom = 121.0
+text = "delete(a bad try]"
+icon_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(52, 18)
+zoom = Vector2(2.9, 2.9)
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="delete_save"]

@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgehxe1awfet7"]
+
+[ext_resource type="FontFile" uid="uid://clj4fbtvaa8fx" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_nieko"]
+[ext_resource type="Texture2D" uid="uid://dbcbmwqn70w6" path="res://Acests/Charcters/tile_0000.png" id="2_67617"]
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="2_qt0ww"]
+[ext_resource type="Script" path="res://starcs.gd" id="3_5xtr2"]
+
+[sub_resource type="Theme" id="Theme_ie3uj"]
+default_font = ExtResource("1_nieko")
+
+[sub_resource type="Theme" id="Theme_xydsj"]
+default_font_size = 13
+
+[node name="PauseMenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ie3uj")
+script = ExtResource("2_qt0ww")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 496.0
+
+[node name="info" type="Label" parent="TabContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 20.0
+offset_right = 153.0
+offset_bottom = 43.0
+text = "name:name"
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 20.0
+offset_right = 106.0
+offset_bottom = 107.0
+texture = ExtResource("2_67617")
+
+[node name="Label2" type="Label" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 43.0
+offset_right = 231.0
+offset_bottom = 69.0
+text = "coin"
+
+[node name="Label3" type="Label" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 69.0
+offset_right = 156.0
+offset_bottom = 87.0
+text = "diamond"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/info"]
+layout_mode = 2
+offset_left = 112.0
+offset_top = 91.0
+offset_right = 386.0
+offset_bottom = 244.0
+theme = SubResource("Theme_xydsj")
+bbcode_enabled = true
+script = ExtResource("3_5xtr2")
+
+[node name="Label2" type="Label" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Label2"]
+visible = false
+layout_mode = 0
+offset_left = 102.0
+offset_top = 37.0
+offset_right = 182.0
+offset_bottom = 55.0
+text = "fuckyu"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 453.0
+offset_right = 125.0
+offset_bottom = 497.0
+text = "Continue"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var hurting=false
-signal death
+#signal death
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -13,6 +13,7 @@ var kill=0
 func  _ready():
 	$CollectionTimer.wait_time=2
 	settings.is_hurting=false
+	position=settings.relive+Vector2.LEFT*30
 	$VisbleTimer.timeout.connect(Visble)
 func _physics_process(delta):
 	if not is_on_floor():
@@ -63,11 +64,7 @@ func _physics_process(delta):
 
 
 func game_over():
-	death.emit()
-	position=Vector2(60,7);
-	print("dead!")
-	deaing=true;
-	hide()
+	get_tree().change_scene_to_file("res://scenes/UI.tscn")
 func drop(body):
 	game_over()
 
