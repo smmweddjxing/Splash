@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://hvktv0glbomd"]
+
+[ext_resource type="Texture2D" uid="uid://bknru3yta62ct" path="res://Acests/Charcters/tile_0011.png" id="1_gqa4i"]
+[ext_resource type="Texture2D" uid="uid://536ne7lbdtnl" path="res://Acests/Charcters/tile_0012.png" id="2_k6q07"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gqa4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k6q07")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]

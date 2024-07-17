@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c24cap143pnsy"]
+[gd_scene load_steps=5 format=3 uid="uid://c24cap143pnsy"]
 
 [ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_m1xek"]
 [ext_resource type="Script" path="res://scripts/showing.gd" id="2_tjv8b"]
 [ext_resource type="Script" path="res://scripts/CoinLabel.gd" id="3_vukny"]
+[ext_resource type="Script" path="res://scripts/StarLabel.gd" id="4_dmjur"]
 
 [node name="Life" type="CanvasLayer"]
 
@@ -35,5 +36,20 @@ script = ExtResource("3_vukny")
 wait_time = 0.2
 one_shot = true
 
+[node name="StarLabel" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 62.0
+offset_right = 61.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("1_m1xek")
+theme_override_font_sizes/font_size = 20
+text = "
+"
+script = ExtResource("4_dmjur")
+
+[node name="Timer" type="Timer" parent="StarLabel"]
+wait_time = 5.0
+
 [connection signal="timeout" from="LifeLabel/Timer" to="LifeLabel" method="hanyuan"]
 [connection signal="timeout" from="CoinLabel/Timer" to="CoinLabel" method="_on_timer_timeout"]
+[connection signal="timeout" from="StarLabel/Timer" to="StarLabel" method="hanyuan"]

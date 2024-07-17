@@ -3,7 +3,7 @@ extends Label
 var yq:int
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	yq=settings.coin
+	yq=settings.life
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

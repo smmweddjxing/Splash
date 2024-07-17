@@ -14,7 +14,6 @@ func  _ready():
 	$CollectionTimer.wait_time=2
 	settings.is_hurting=false
 	$VisbleTimer.timeout.connect(Visble)
-	
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta

@@ -11,7 +11,7 @@ func _process(delta):
 	if  yq!=settings.coin:
 		add_theme_color_override("font_color",Color(1,1,0))
 		$Timer.start()
-	text="Coins    "+str(int(settings.coin))
+	text="Coin    "+str(int(settings.coin))
 	yq=settings.coin
 
 
