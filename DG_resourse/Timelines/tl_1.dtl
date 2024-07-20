@@ -1,0 +1,19 @@
+join Player 1 [animation="Bounce In" wait="true"]
+join npc1 1 [animation="Bounce In" length="0" wait="true"]
+npc1 (NPC): Hey!How do you do?
+Player (Player): That is a mess!
+Player (Player): Oh! I can't belive!The [b]Browns [/b][i]ALWAYS[i] come into my home and give a mess.
+Player (Player): I am unbearable.So,I give up and go out.
+npc1 (NPC): Oh!It is a pity!
+Player (Player): Yes.I hate them.But a very terrible thing happend\:
+Player (Player): ...
+[wait time="2.0"]
+Player (Player): [color="red"]I AM LOST![/color]
+npc1 (NPC): Oh,It is a terrible bad thing.\
+I am not glad to hear it.
+npc1 (NPC): If you be tactful,you should touch that [color="red"]flag[/color] to save your [color="green"]process[/color].
+npc1 (NPC): Look at those [color="yellow"]squares[/color].They are not a duck soup.\
+Look at their [color="red"]fearful faces[/color]!Jump to his head and beat them down!Show your unique skill!
+npc1 (NPC): Also,the diamonds are good for you.\
+Because they can give [color="orange"]POWER[/color] for you!
+Player (Player): Thank you very much.

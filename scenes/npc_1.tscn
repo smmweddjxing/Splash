@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpvg4nsggo2fh"]
+
+[ext_resource type="Script" path="res://scripts/NPC1.gd" id="1_f2k25"]
+[ext_resource type="SpriteFrames" uid="uid://dd0e362hcwd5b" path="res://Animations/npc1.tres" id="2_lbe1x"]
+[ext_resource type="FontFile" uid="uid://clj4fbtvaa8fx" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="3_d0s56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x53gp"]
+size = Vector2(16, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vswow"]
+size = Vector2(57, 19)
+
+[node name="NPC1" type="CharacterBody2D"]
+process_mode = 3
+script = ExtResource("1_f2k25")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 11.9999)
+sprite_frames = ExtResource("2_lbe1x")
+animation = &"walk"
+frame = 1
+frame_progress = 0.466954
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_x53gp")
+
+[node name="ShowTipArea" type="Area2D" parent="."]
+
+[node name="AreaCollision" type="CollisionShape2D" parent="ShowTipArea"]
+position = Vector2(-0.5, 13.5)
+shape = SubResource("RectangleShape2D_vswow")
+
+[node name="Label" type="Label" parent="ShowTipArea"]
+visible = false
+offset_left = -56.0
+offset_top = -80.0
+offset_right = 66.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_d0s56")
+theme_override_font_sizes/font_size = 30
+text = "!"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="body_entered" from="ShowTipArea" to="." method="show_label"]
+[connection signal="body_exited" from="ShowTipArea" to="." method="hide_label"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cg53nuw8b8plc"]
 
-[ext_resource type="Script" path="res://scripts/guai.gd" id="1_6gfat"]
+[ext_resource type="Script" path="res://Scripts/guai.gd" id="1_6gfat"]
 [ext_resource type="SpriteFrames" uid="uid://hvktv0glbomd" path="res://Animations/guai.tres" id="2_i7632"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ib56"]

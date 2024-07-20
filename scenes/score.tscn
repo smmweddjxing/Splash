@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://gf7qov6k2ii5"]
 
-[ext_resource type="Script" path="res://Score.gd" id="1_xcqib"]
-[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="2_78w1w"]
+[ext_resource type="Script" path="res://scripts/Score.gd" id="1_xcqib"]
+[ext_resource type="FontFile" uid="uid://clj4fbtvaa8fx" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="2_78w1w"]
 
 [node name="Score it" type="Control"]
 layout_mode = 3

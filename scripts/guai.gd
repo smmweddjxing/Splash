@@ -20,16 +20,17 @@ func _physics_process(delta):
 	if is_on_wall():
 		k*=-1
 	velocity.x*=k
-	move_and_slide()
-	f = get_last_slide_collision()
+	if not settings.is_Dialog:
+		move_and_slide()
+		f = get_last_slide_collision()
 
-	#Colletion Start
-	if f:
-		if f.get_collider().name=="Player":
-			if not settings.is_hurting:
-				hit.emit()
-	
-		
-	#Collection End
+		#Colletion Start
+		if f:
+			if f.get_collider().name=="Player":
+				if not settings.is_hurting:
+					hit.emit()	
+		#Collection End
+	else:
+		$AnimatedSprite2D.stop()
 	if position.y>270:
 		free()

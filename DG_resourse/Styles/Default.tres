@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=17 format=3 uid="uid://b5j8xhfjrn1t7"]
+
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="1_nth2i"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_7du4h"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="3_k6ch0"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_2a73o"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="5_1pdyp"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="6_vkqa1"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="7_jf07p"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="8_ry0jq"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="9_0bm76"]
+
+[sub_resource type="Resource" id="Resource_6dwua"]
+script = ExtResource("2_7du4h")
+scene = ExtResource("1_nth2i")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_sy2lm"]
+script = ExtResource("2_7du4h")
+scene = ExtResource("3_k6ch0")
+overrides = {
+"custom_bold_font": "\"res://Acests/UI/Blue/Default/Hey Comic.ttf\"",
+"custom_bold_italic_font": "\"res://Acests/UI/Blue/Default/Hey Comic.ttf\"",
+"custom_italic_font": "\"res://Acests/UI/Blue/Default/Hey Comic.ttf\"",
+"custom_normal_font": "\"res://Acests/UI/Blue/Default/Hey Comic.ttf\"",
+"name_label_color_mode": "1",
+"name_label_customfont": "\"res://Acests/UI/Blue/Default/Hey Comic.ttf\"",
+"name_label_use_global_font": "false",
+"portrait_position": "1",
+"use_global_fonts": "false"
+}
+
+[sub_resource type="Resource" id="Resource_s3f0o"]
+script = ExtResource("2_7du4h")
+scene = ExtResource("4_2a73o")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_5jy4n"]
+script = ExtResource("2_7du4h")
+scene = ExtResource("5_1pdyp")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_qs0q6"]
+script = ExtResource("2_7du4h")
+scene = ExtResource("6_vkqa1")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_khdij"]
+script = ExtResource("2_7du4h")
+scene = ExtResource("7_jf07p")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_f7ybl"]
+script = ExtResource("2_7du4h")
+scene = ExtResource("8_ry0jq")
+overrides = {}
+
+[resource]
+script = ExtResource("9_0bm76")
+name = "Default"
+base_overrides = {
+"global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
+}
+layers = Array[ExtResource("2_7du4h")]([SubResource("Resource_6dwua"), SubResource("Resource_sy2lm"), SubResource("Resource_s3f0o"), SubResource("Resource_5jy4n"), SubResource("Resource_qs0q6"), SubResource("Resource_khdij"), SubResource("Resource_f7ybl")])
+metadata/_latest_layer = 1

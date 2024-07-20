@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://8idil376qdi"]
+
+[ext_resource type="FontFile" uid="uid://u5ihlghfc832" path="res://Acests/UI/Blue/Default/Lemon Shake Shake.ttf" id="1_iy307"]
+[ext_resource type="Script" path="res://Scripts/talking_dialog.gd" id="2_183be"]
+[ext_resource type="Texture2D" uid="uid://b3eeko7eeuevl" path="res://Acests/UI/Blue/Default/Enterkey.png" id="3_w6htg"]
+
+[sub_resource type="Theme" id="Theme_q5gcy"]
+default_font = ExtResource("1_iy307")
+
+[node name="TalkingDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_q5gcy")
+script = ExtResource("2_183be")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 366.0
+offset_bottom = 177.0
+color = Color(0.573528, 0.629306, 0.968169, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_right = 366.0
+offset_bottom = 133.0
+bbcode_enabled = true
+text = "dialog"
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 125.0
+offset_right = 468.0
+offset_bottom = 219.0
+texture = ExtResource("3_w6htg")
+expand_mode = 1

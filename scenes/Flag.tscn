@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://br2aj14ev12or"]
 
-[ext_resource type="Script" path="res://scripts/Flag.gd" id="1_erlx2"]
+[ext_resource type="Script" path="res://Scripts/Flag.gd" id="1_erlx2"]
 [ext_resource type="SpriteFrames" uid="uid://dd45jjtvfvowd" path="res://Animations/flag.tres" id="2_xck36"]
-[ext_resource type="FontFile" uid="uid://cx40y38ixiwyy" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="3_o6q2k"]
+[ext_resource type="FontFile" uid="uid://dswr0nbtug8i" path="res://Acests/Kenney Future Narrow.ttf" id="3_o6q2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsqmn"]
 size = Vector2(22, 41)

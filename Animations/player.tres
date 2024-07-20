@@ -16,6 +16,14 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_tpppj")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tpppj")
 }, {
 "duration": 1.0,
 "texture": ExtResource("1_yds70")

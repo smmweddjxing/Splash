@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=3 uid="uid://cgehxe1awfet7"]
+
+[ext_resource type="FontFile" uid="uid://clj4fbtvaa8fx" path="res://Acests/UI/Blue/Default/Kenney Future Narrow.ttf" id="1_nieko"]
+[ext_resource type="Texture2D" uid="uid://dbcbmwqn70w6" path="res://scripts/tile_0000.png" id="2_67617"]
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="2_qt0ww"]
+[ext_resource type="Script" path="res://scripts/starcs.gd" id="3_5xtr2"]
+[ext_resource type="Script" path="res://Scripts/DS.gd" id="3_fk6pp"]
+[ext_resource type="Script" path="res://Scripts/Reports.gd" id="3_ttfh5"]
+[ext_resource type="Script" path="res://Scripts/Namebutton.gd" id="5_3moq8"]
+
+[sub_resource type="Theme" id="Theme_ie3uj"]
+default_font = ExtResource("1_nieko")
+
+[sub_resource type="Theme" id="Theme_xydsj"]
+default_font_size = 13
+
+[node name="PauseMenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ie3uj")
+script = ExtResource("2_qt0ww")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 766.0
+offset_bottom = 495.0
+
+[node name="info" type="Label" parent="TabContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 20.0
+offset_right = 153.0
+offset_bottom = 43.0
+text = "name:name"
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 20.0
+offset_right = 106.0
+offset_bottom = 107.0
+texture = ExtResource("2_67617")
+
+[node name="Label2" type="Label" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 43.0
+offset_right = 231.0
+offset_bottom = 69.0
+text = "coin"
+
+[node name="Label3" type="Label" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 69.0
+offset_right = 156.0
+offset_bottom = 87.0
+text = "diamond"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/info"]
+layout_mode = 2
+offset_left = 112.0
+offset_top = 91.0
+offset_right = 386.0
+offset_bottom = 244.0
+theme = SubResource("Theme_xydsj")
+bbcode_enabled = true
+script = ExtResource("3_5xtr2")
+
+[node name="Namebutton" type="Button" parent="TabContainer/info"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 21.0
+offset_right = 337.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0.717647, 0, 1)
+theme_override_font_sizes/font_size = 12
+toggle_mode = true
+text = "reset name"
+script = ExtResource("5_3moq8")
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/info/Namebutton"]
+visible = false
+layout_mode = 0
+offset_left = 107.0
+offset_top = 1.0
+offset_right = 209.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 11
+placeholder_text = "new name"
+
+[node name="Savings" type="Label" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="DS" type="Button" parent="TabContainer/Savings"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 15.0
+offset_right = 186.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "delete saving (danger!)"
+script = ExtResource("3_fk6pp")
+
+[node name="Timer" type="Timer" parent="TabContainer/Savings/DS"]
+wait_time = 20.0
+
+[node name="about" type="Label" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/about"]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 19.0
+offset_right = 509.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 30
+text = "give reports"
+
+[node name="Reports" type="Button" parent="TabContainer/about"]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 345.0
+offset_right = 641.0
+offset_bottom = 371.0
+text = "submit and report"
+script = ExtResource("3_ttfh5")
+
+[node name="TextEdit" type="TextEdit" parent="TabContainer/about/Reports"]
+layout_mode = 0
+offset_left = -303.0
+offset_top = -273.0
+offset_right = 221.0
+offset_bottom = -8.0
+placeholder_text = "       hey! give me a report if you have issues with
+the game.
+                  by xing"
+
+[node name="Timer" type="Timer" parent="TabContainer/about/Reports"]
+wait_time = 5.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 453.0
+offset_right = 125.0
+offset_bottom = 497.0
+text = "resume"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="TabContainer/info/Namebutton" to="TabContainer/info/Namebutton" method="rename"]
+[connection signal="pressed" from="TabContainer/Savings/DS" to="TabContainer/Savings/DS" method="_on_pressed"]
+[connection signal="pressed" from="TabContainer/about/Reports" to="TabContainer/about/Reports" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

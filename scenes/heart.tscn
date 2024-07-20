@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b35x85j0nk78w"]
 
-[ext_resource type="Script" path="res://Heart.gd" id="1_7mfvi"]
+[ext_resource type="Script" path="res://scripts/Heart.gd" id="1_7mfvi"]
 [ext_resource type="Texture2D" uid="uid://yyrnu0rdp5vn" path="res://Acests/tile_0373.png" id="2_2q34v"]
 
 [node name="Heart" type="Area2D"]
