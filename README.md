@@ -9,6 +9,7 @@ It have no **Perfect Images**.\
 It have no **Great Animations**.
 ## How to play
 Use WASD key to control the player(W and S cannot control anything but is is the future).\
+You may press *ALT* to dialog with others.
 Use UP key to control the player jump.\
 If you see an enemy colors yellow:\
 Don't think:**Stomp** on its head!When it going dead you will get some coins\
